@@ -1,12 +1,12 @@
 import aproximacion
 import busqueda_binaria
-import enumeracion
+import enumeracion_exhaustiva
 
 
 def switch_algoritm(argument):
     switcher = {
         1: busqueda_binaria.calculate_square_root,
-        2: enumeracion.calculate_square_root,
+        2: enumeracion_exhaustiva.calculate_square_root,
         3: aproximacion.calculate_square_root,
     }
     func = switcher.get(argument, lambda: 'Invalid Number')
@@ -17,10 +17,7 @@ def main():
     algoritm = int(input('''Que algoritmo deseas utilizar? 
                             1: busqueda_binaria,
                             2: enumeracion,
-                            3: aproximacion,
-                            4: iteraciones,
-                            5: programas_ramificados,
-                            6: quien_es_mayor_de_edad
+                            3: aproximacion
                             (Elije una opcion, presionando solo un numero): '''))
     switch_algoritm(algoritm)
 
